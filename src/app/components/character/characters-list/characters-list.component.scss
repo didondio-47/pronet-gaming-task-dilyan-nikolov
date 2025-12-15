@@ -1,0 +1,48 @@
+table {
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .mat-mdc-form-field {
+        font-size: 14px;
+        width: 40%;
+    }
+
+    button {
+        min-width: 140px;
+    }
+}
+
+.character-table {
+    .mat-mdc-row {
+        position: relative;
+
+        &.character-table--active {
+            background: #e6e6e6;
+        }
+
+        &.character-table--active:hover {
+            background: #cccccc;
+            cursor: pointer;
+        }
+
+        &:not(.character-table--active):hover {
+            background: #cccccc;
+            cursor: pointer;
+        }
+    }
+}
+
+.favorite {
+    color: #ff4081;
+}

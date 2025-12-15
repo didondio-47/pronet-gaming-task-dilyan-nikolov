@@ -1,0 +1,10 @@
+<mat-drawer-container class="page-container__drawer" autosize>
+    <mat-drawer-content>
+        <div class="page-container" [class.page-container--drawer-open]="showDrawer()">
+            <ng-content></ng-content>
+        </div>
+    </mat-drawer-content>
+    <mat-drawer mode="side" position="end" [opened]="showDrawer()" style="height: max-content;">
+        <ng-container *ngTemplateOutlet="drawerContent()"></ng-container>
+    </mat-drawer>
+</mat-drawer-container>

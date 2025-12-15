@@ -1,0 +1,57 @@
+@if(characterId()) {
+@let details = character$ | async;
+<div class="header">
+    <h2>Character Details</h2>
+    <button mat-icon-button (click)="closeDetails.emit()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<table class="details-table">
+    <th></th>
+    <tr>
+        <td>Name</td>
+        <td>{{ details?.character?.name || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Aliases</td>
+        @for(alias of details?.character?.aliases; let i = $index; track i) {
+        <td>{{ alias }}</td>
+        }
+    </tr>
+    <tr>
+        <td>Titles</td>
+        @for(title of details?.character?.titles; let j = $index; track j) {
+        <td>{{ title }}</td>
+        }
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{ details?.character?.gender || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Born</td>
+        <td>{{ details?.character?.gender || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Played By</td>
+        <td>{{ details?.character?.playedBy || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Died</td>
+        <td>{{ details?.character?.died || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Father</td>
+        <td>{{ details?.father?.name || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Mother</td>
+        <td>{{ details?.mother?.name || '--'}}</td>
+    </tr>
+    <tr>
+        <td>Spouse</td>
+        <td>{{ details?.spouse?.name || '--'}}</td>
+    </tr>
+</table>
+}

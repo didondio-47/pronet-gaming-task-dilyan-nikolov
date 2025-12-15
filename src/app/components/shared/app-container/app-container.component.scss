@@ -1,0 +1,26 @@
+:host {
+    position: relative;
+    background: white;
+    border-radius: 29px 0 0 29px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+
+    &__drawer {
+        height: 100%;
+    }
+
+    &--drawer-open {
+        padding-right: 16px;
+    }
+
+}
